@@ -1,0 +1,89 @@
+.card_container {
+    display: flex;
+    width:23rem;
+    height: 15rem;
+    flex-flow: column;
+    position: relative;
+}
+
+.card-content_container {
+    height:13rem;
+    background-color: var(--card-background);
+    padding:2% 1%;
+}
+
+.card-content_title {
+    margin-top: 1%;
+    width:90%;
+    border: none;
+    background: none;
+    font-weight: bold;
+    font-size: 1.2rem;;
+}
+
+.card-content_text {
+    margin-top: 2%;
+    width:90%;
+    height:60%;
+    resize: none;
+    border: none;
+    background: none;
+    font-size: 1rem;
+}
+
+.card-content_text:focus, .card-content_title:focus {
+    border: 2px solid var(--blue-primary);
+}
+
+.card-content_container::before {
+    content: '';
+    position: absolute;
+    bottom: 23px; right: 0;
+    border-bottom: 60px solid var(--blue-secondary);
+    border-left: 60px solid rgba(0,0,0,0);
+    width: 0;
+}
+
+.card-controls_container {
+    width: 100%;
+    height:2rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.card_container:hover .card-controls, .card_container:focus .card-controls {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.card-controls {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+    user-select: none;
+}
+
+.card-button_delete {
+    color:red;
+    font-weight: lighter;
+}
+
+.card-button_save {
+    color:white;
+}
+
+.card-controls:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .card-controls {
+        transition: none;
+        opacity: 1;
+    }
+}

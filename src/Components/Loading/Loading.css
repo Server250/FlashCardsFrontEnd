@@ -1,0 +1,21 @@
+.loading_text {
+    color:var(--text-secondary);
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+}
+
+.loading_text::after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    animation: ellipsis steps(4, end) 1000ms infinite;
+    content: "\2026";
+    width:0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 2rem;
+    }
+}

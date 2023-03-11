@@ -1,0 +1,41 @@
+.cards-display_container {
+    width: 90vw;
+    margin-left: 5vw;
+    height:90vh;
+}
+
+.cards-display_grid {
+    padding-top:5vh;
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    gap:4%;
+}
+
+.cards-display_navigation {
+    display: flex;
+    justify-content: space-between;
+    padding-top:5rem;
+    height:3rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .cards-display_container {
+        width: 100vw;
+        margin-left: 0px;
+        overflow-x: hidden;
+    }
+
+    .cards-display_grid { 
+        justify-content: center;
+    }
+
+    .cards-display_navigation {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding-top:5rem;
+        height:3rem;
+    }
+
+}

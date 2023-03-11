@@ -1,0 +1,14 @@
+.newCard::placeholder {
+    color:var(--invert-text-primary);
+}
+
+.card-controls_container.newCard {
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 800px) {
+    .card-controls {
+        transition: none;
+        opacity: 1;
+    }
+}
